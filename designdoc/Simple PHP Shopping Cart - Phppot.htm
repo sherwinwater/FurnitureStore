@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://phppot.com/php/simple-php-shopping-cart/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Simple PHP Shopping Cart - Phppot</title>
+<meta name="description" content="Building a PHP shopping cart eCommerce software is simple and easy. In this tutorial, let’s create a simple PHP shopping cart software with MySQL. The intention of this shopping cart software is that it should be simple and as minimal as possible. You can download this free and customize it for your needs within minutes. […]"><link rel="next" href="https://phppot.com/demo/simple-php-shopping-cart/">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://phppot.com/feed/">
+<link rel="apple-touch-icon" sizes="180x180" href="https://phppot.com/apple-touch-icon.png?v=031218">
+<link rel="icon" type="image/png" sizes="32x32" href="https://phppot.com/favicon-32x32.png?v=031218">
+<link rel="icon" type="image/png" sizes="16x16" href="https://phppot.com/favicon-16x16.png?v=031218">
+<link rel="manifest" href="https://phppot.com/site.webmanifest?v=031218">
+<link rel="mask-icon" href="https://phppot.com/safari-pinned-tab.svg?v=031218" color="#ffa500">
+<link rel="shortcut icon" href="https://phppot.com/favicon.ico?v=031218">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Simple PHP Shopping Cart - Phppot">
+<meta property="og:site_name" content="Phppot">
+<meta property="og:description" content="Building a PHP shopping cart eCommerce software is simple and easy. In this tutorial, let’s create a simple PHP shopping cart software with MySQL. The intention of this shopping cart software is that it should be simple and as minimal as possible. You can download this free and customize it for your needs within minutes. […]"><meta property="og:url" content="https://phppot.com/php/simple-php-shopping-cart/">
+<meta property="twitter:title" content="Simple PHP Shopping Cart - Phppot">
+<meta name="twitter:site" content="@phppot">
+<meta property="twitter:creator" content="@phppot">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://phppot.com/wp-content/uploads/2014/10/shopping.jpeg"><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:description" content="Building a PHP shopping cart eCommerce software is simple and easy. In this tutorial, let’s create a simple PHP shopping cart software with MySQL. The intention of this shopping cart software is that it should be simple and as minimal as possible. You can download this free and customize it for your needs within minutes. […]"><meta property="twitter:image" content="https://phppot.com/wp-content/uploads/2014/10/shopping.jpeg"><script type="text/javascript" async="" src="./Simple PHP Shopping Cart - Phppot_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40067115-1']);
+  _gaq.push(['_setDomainName', 'phppot.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://www.google-analytics.com/"><link rel="dns-prefetch" href="https://www.youtube.com/"><link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/"><link rel="dns-prefetch" href="https://static.doubleclick.net/"><link rel="dns-prefetch" href="https://www.google.com/"><link rel="dns-prefetch" href="https://i.ytimg.com/"><link rel="dns-prefetch" href="https://yt3.ggpht.com/"><link rel="dns-prefetch" href="https://fonts.gstatic.com/"><link rel="stylesheet" id="wp-block-library-css" href="./Simple PHP Shopping Cart - Phppot_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="main-style-css" href="./Simple PHP Shopping Cart - Phppot_files/papers_24201.css" type="text/css" media="all">
+<link rel="canonical" href="https://phppot.com/php/simple-php-shopping-cart/">
+</head>
+<body onload="prettyPrint()">
+ <div id="site_header">
+    <div class="content">
+        <a href="https://phppot.com/" title="Helping you build the best websites!"><img src="./Simple PHP Shopping Cart - Phppot_files/phppot-logo.png" id="site-logo" alt="Helping you build the best websites!"></a>
+        <div class="search-container">
+            <form method="get" action="https://phppot.com/" class="search-form">
+                <input name="s" class="search" placeholder="Search Phppot" title="Search Phppot" autocomplete="off">
+                <button type="submit" title="Search Phppot" id="search-button"></button>
+            </form>
+        </div>
+        <div class="header-link-container">
+            <span id="mobile-search-icon" onclick="toggleSearch();">Mobile
+                Search</span>
+                <div id="expand-sub-menu-icon">
+                    <a class="testimonial-icon" href="https://phppot.com/testimonials/">Testimonials</a>
+                </div>  <a id="header-contact-navigation" href="https://phppot.com/contact/">Contact Me</a>
+        </div>
+    </div>
+</div>    <div class="content">
+        <div id="tutorial-body">
+            <div id="tutorial">
+                <h1>Simple PHP Shopping Cart</h1>
+                <div class="modified-on">Last modified on July 30th, 2019 by Vincy.</div>
+<p>Building a PHP shopping cart eCommerce software is simple and easy. In this tutorial, let’s create a simple PHP shopping cart software with MySQL.</p>
+<p>The intention of this shopping cart software is that it should be simple and as minimal as possible. You can download this free and customize it for your needs within minutes.</p>
+<p><img class="alignnone size-full wp-image-5655" src="./Simple PHP Shopping Cart - Phppot_files/shopping.jpeg" alt="shopping" width="550" height="340" srcset="https://phppot.com/wp-content/uploads/2014/10/shopping.jpeg 550w, https://phppot.com/wp-content/uploads/2014/10/shopping-300x185.jpeg 300w" sizes="(max-width: 550px) 100vw, 550px"></p>
+<p><a class="demo" href="https://phppot.com/demo/simple-php-shopping-cart/">View Demo</a></p>
+<p class="video-container"><iframe src="./Simple PHP Shopping Cart - Phppot_files/cnmLZs9gR7Q.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<h2>PHP Shopping Cart Software Development Overview</h2>
+<p>PHP shopping cart example has the following functionality:&nbsp;</p>
+<ol>
+<li>Retrieve product information from the database.</li>
+<li>Create product gallery for the shopping cart.</li>
+<li>Manage cart items using the PHP session.</li>
+<li>Handle add, edit, remove and empty cart actions.</li>
+</ol>
+<p>I have retrieved information like name, code, price, and photos from the database. The resultant information is in an array format.</p>
+<p>I have iterated this resultant array to form the product gallery. Every product in the gallery will have an add-to-cart option.</p>
+<p>I have used the PHP shopping cart session to store and manage the items in the cart.</p>
+<p>Once the session expires, the cart items get cleared. This code has an option to clear the entire cart or to remove any particular item from the cart.</p>
+<p><strong>File Structure</strong></p>
+<p>The shopping cart software example has the following file structure. The below list has the file names and their responsibility.</p>
+<p>You can build a gallery-based shopping cart software with these files in few minutes.</p>
+<ul>
+<li><strong>dbcontroller.php&nbsp;</strong>– a generic database layer to help with DAO functions. It also manages the database connection.</li>
+<li><strong>index.php – </strong>to display the <a href="https://phppot.com/php/responsive-product-gallery-for-shopping-cart/">product gallery for the shopping cart.</a></li>
+<li><strong>style.css –&nbsp;</strong>to <a href="https://phppot.com/php/amazon-like-product-images-showcase-for-shopping-cart/">showcase products for the shopping cart</a>.&nbsp;The styles are minimal and cross-browser compatible.</li>
+<li><strong>tblproduct.sql</strong> – contains SQL script with the product table structure and the data.</li>
+<li><strong>product-images</strong> – a folder that contains the product images. I have used these images to show the product gallery.&nbsp;</li>
+</ul>
+<h2>Create a Product Gallery for Shopping Cart</h2>
+<p>If you are familiar with online shopping, you might have across product galleries. It is an important gateway in a shopping cart application.</p>
+<p>Users will use the product gallery to get a feel of the products available to buy. It is a critical component of every online store.</p>
+<p>You should always provide a catalog of the available products to let them have a glance. It helps to promote your products for the impulsive buyers.</p>
+<p>In the following code, I have shown the PHP script to get the product results from the database. The result will be an array and iterated to create product card in each iteration.</p>
+<p>The DBController.php class will handle the DAO operation and fetch products result.</p>
+<pre class="prettyprint lang-php prettyprinted" style=""><span class="pun">&lt;?</span><span class="pln">php
+$product_array </span><span class="pun">=</span><span class="pln"> $db_handle</span><span class="pun">-&gt;</span><span class="pln">runQuery</span><span class="pun">(</span><span class="str">"SELECT * FROM tblproduct ORDER BY id ASC"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$product_array</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+	</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">$product_array </span><span class="kwd">as</span><span class="pln"> $key</span><span class="pun">=&gt;</span><span class="pln">$value</span><span class="pun">){</span><span class="pln">
+</span><span class="pun">?&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-item"</span><span class="tag">&gt;</span><span class="pln">
+		&lt;form method="post" action="index.php?action=add&amp;code=</span><span class="pun">&lt;?</span><span class="pln">php echo $product_array</span><span class="pun">[</span><span class="pln">$key</span><span class="pun">][</span><span class="str">"code"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">"&gt;
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-image"</span><span class="tag">&gt;</span><span class="pln">&lt;img src="</span><span class="pun">&lt;?</span><span class="pln">php echo $product_array</span><span class="pun">[</span><span class="pln">$key</span><span class="pun">][</span><span class="str">"image"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">"&gt;</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-tile-footer"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-title"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo $product_array</span><span class="pun">[</span><span class="pln">$key</span><span class="pun">][</span><span class="str">"name"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-price"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo </span><span class="str">"$"</span><span class="pun">.</span><span class="pln">$product_array</span><span class="pun">[</span><span class="pln">$key</span><span class="pun">][</span><span class="str">"price"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cart-action"</span><span class="tag">&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"product-quantity"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"quantity"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"1"</span><span class="pln"> </span><span class="atn">size</span><span class="pun">=</span><span class="atv">"2"</span><span class="pln"> </span><span class="tag">/&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Add to Cart"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btnAddAction"</span><span class="pln"> </span><span class="tag">/&gt;&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/form&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="pun">&lt;?</span><span class="pln">php
+	</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">?&gt;</span></pre>
+<h2>Adding Products&nbsp; to Shopping Cart</h2>
+<p>After creating the product gallery page, we need to work on the PHP code to perform the cart actions. They are add-to-cart, remove a single item from the cart, clear the complete cart and similar.</p>
+<p>In the above code, I have added the HTML option to add the product to the shopping cart from the product gallery. When the user clicks the ‘Add to Cart’ button, the HTML form passes the product id to the backend PHP script.</p>
+<p>In PHP, I receive and process the cart action with a switch control statement. I have created PHP switch cases to handle the add-to-cart, remove-single, empty-cart actions.</p>
+<p>The action is the&nbsp;argument to the switch statement. Then it executes the corresponding action case as requested.</p>
+<p>The “add” case handles the add to cart action. In this case, I have received the product id and the quantity.</p>
+<p>The cart session stores the submitted product. I have updated the quantity of the product if it already exists in the session cart. The PHP session index is the reference to perform this action.</p>
+<pre class="prettyprint lang-php prettyprinted" style=""><span class="kwd">case</span><span class="pln"> </span><span class="str">"add"</span><span class="pun">:</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$_POST</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		$productByCode </span><span class="pun">=</span><span class="pln"> $db_handle</span><span class="pun">-&gt;</span><span class="pln">runQuery</span><span class="pun">(</span><span class="str">"SELECT * FROM tblproduct WHERE code='"</span><span class="pln"> </span><span class="pun">.</span><span class="pln"> $_GET</span><span class="pun">[</span><span class="str">"code"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">.</span><span class="pln"> </span><span class="str">"'"</span><span class="pun">);</span><span class="pln">
+		$itemArray </span><span class="pun">=</span><span class="pln"> array</span><span class="pun">(</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"code"</span><span class="pun">]=&gt;</span><span class="pln">array</span><span class="pun">(</span><span class="str">'name'</span><span class="pun">=&gt;</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"name"</span><span class="pun">],</span><span class="pln"> </span><span class="str">'code'</span><span class="pun">=&gt;</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"code"</span><span class="pun">],</span><span class="pln"> </span><span class="str">'quantity'</span><span class="pun">=&gt;</span><span class="pln">$_POST</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">],</span><span class="pln"> </span><span class="str">'price'</span><span class="pun">=&gt;</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"price"</span><span class="pun">],</span><span class="pln"> </span><span class="str">'image'</span><span class="pun">=&gt;</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"image"</span><span class="pun">]));</span><span class="pln">
+		
+		</span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">in_array</span><span class="pun">(</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"code"</span><span class="pun">],</span><span class="pln">array_keys</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">])))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> $k </span><span class="pun">=&gt;</span><span class="pln"> $v</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+						</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">$productByCode</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">"code"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> $k</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+							</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">][</span><span class="pln">$k</span><span class="pun">][</span><span class="str">"quantity"</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+								$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">][</span><span class="pln">$k</span><span class="pun">][</span><span class="str">"quantity"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+							</span><span class="pun">}</span><span class="pln">
+							$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">][</span><span class="pln">$k</span><span class="pun">][</span><span class="str">"quantity"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">+=</span><span class="pln"> $_POST</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">];</span><span class="pln">
+						</span><span class="pun">}</span><span class="pln">
+				</span><span class="pun">}</span><span class="pln">
+			</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> array_merge</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">],</span><span class="pln">$itemArray</span><span class="pun">);</span><span class="pln">
+			</span><span class="pun">}</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> $itemArray</span><span class="pun">;</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+	</span><span class="kwd">break</span><span class="pun">;</span></pre>
+<h2>List Cart Items from the PHP Session</h2>
+<p>This code shows the HTML to display the shopping cart with action controls. The loop iterates the cart session to list the cart items in a tabular format.</p>
+<p>Each row shows the product image, title, price, item quantity with a remove option. Also, it shows the total item quantity and the total item price by summing up the individual cart items.</p>
+<pre class="prettyprint lang-php prettyprinted" style=""><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"shopping-cart"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"txt-heading"</span><span class="tag">&gt;</span><span class="pln">Shopping Cart</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"btnEmpty"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"index.php?action=empty"</span><span class="tag">&gt;</span><span class="pln">Empty Cart</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+</span><span class="pun">&lt;?</span><span class="pln">php
+</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">isset</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">])){</span><span class="pln">
+    $total_quantity </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+    $total_price </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">?&gt;</span><span class="pln">	
+</span><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tbl-cart"</span><span class="pln"> </span><span class="atn">cellpadding</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="atn">cellspacing</span><span class="pun">=</span><span class="atv">"1"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;tbody&gt;</span><span class="pln">
+</span><span class="tag">&lt;tr&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">left</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Name</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">left</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Code</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"5%"</span><span class="tag">&gt;</span><span class="pln">Quantity</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"10%"</span><span class="tag">&gt;</span><span class="pln">Unit Price</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"10%"</span><span class="tag">&gt;</span><span class="pln">Price</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;th</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"5%"</span><span class="tag">&gt;</span><span class="pln">Remove</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+</span><span class="tag">&lt;/tr&gt;</span><span class="pln">	
+</span><span class="pun">&lt;?</span><span class="pln">php		
+    </span><span class="kwd">foreach</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> $item</span><span class="pun">){</span><span class="pln">
+        $item_price </span><span class="pun">=</span><span class="pln"> $item</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">]*</span><span class="pln">$item</span><span class="pun">[</span><span class="str">"price"</span><span class="pun">];</span><span class="pln">
+		</span><span class="pun">?&gt;</span><span class="pln">
+				</span><span class="tag">&lt;tr&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td&gt;</span><span class="pln">&lt;img src="</span><span class="pun">&lt;?</span><span class="pln">php echo $item</span><span class="pun">[</span><span class="str">"image"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">" class="cart-item-image" /&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo $item</span><span class="pun">[</span><span class="str">"name"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo $item</span><span class="pun">[</span><span class="str">"code"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo $item</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td</span><span class="pln">  </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo </span><span class="str">"$ "</span><span class="pun">.</span><span class="pln">$item</span><span class="pun">[</span><span class="str">"price"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td</span><span class="pln">  </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">right</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo </span><span class="str">"$ "</span><span class="pun">.</span><span class="pln"> number_format</span><span class="pun">(</span><span class="pln">$item_price</span><span class="pun">,</span><span class="lit">2</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">&lt;a href="index.php?action=remove&amp;code=</span><span class="pun">&lt;?</span><span class="pln">php echo $item</span><span class="pun">[</span><span class="str">"code"</span><span class="pun">];</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">" class="btnRemoveAction"&gt;</span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"icon-delete.png"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">"Remove Item"</span><span class="pln"> </span><span class="tag">/&gt;&lt;/a&gt;&lt;/td&gt;</span><span class="pln">
+				</span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+				</span><span class="pun">&lt;?</span><span class="pln">php
+				$total_quantity </span><span class="pun">+=</span><span class="pln"> $item</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">];</span><span class="pln">
+				$total_price </span><span class="pun">+=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$item</span><span class="pun">[</span><span class="str">"price"</span><span class="pun">]*</span><span class="pln">$item</span><span class="pun">[</span><span class="str">"quantity"</span><span class="pun">]);</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+		</span><span class="pun">?&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;tr&gt;</span><span class="pln">
+</span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">colspan</span><span class="pun">=</span><span class="atv">"2"</span><span class="pln"> </span><span class="atn">align</span><span class="pun">=</span><span class="atv">"right"</span><span class="tag">&gt;</span><span class="pln">Total:</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+</span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">align</span><span class="pun">=</span><span class="atv">"right"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo $total_quantity</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+</span><span class="tag">&lt;td</span><span class="pln"> </span><span class="atn">align</span><span class="pun">=</span><span class="atv">"right"</span><span class="pln"> </span><span class="atn">colspan</span><span class="pun">=</span><span class="atv">"2"</span><span class="tag">&gt;&lt;strong&gt;</span><span class="pun">&lt;?</span><span class="pln">php echo </span><span class="str">"$ "</span><span class="pun">.</span><span class="pln">number_format</span><span class="pun">(</span><span class="pln">$total_price</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/strong&gt;&lt;/td&gt;</span><span class="pln">
+</span><span class="tag">&lt;td&gt;&lt;/td&gt;</span><span class="pln">
+</span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+</span><span class="tag">&lt;/tbody&gt;</span><span class="pln">
+</span><span class="tag">&lt;/table&gt;</span><span class="pln">		
+  </span><span class="pun">&lt;?</span><span class="pln">php
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"no-records"</span><span class="tag">&gt;</span><span class="pln">Your Cart is Empty</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="pun">&lt;?</span><span class="pln">php 
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+<h2>Removing or Clearing Cart Item</h2>
+<p>The loop iterates the cart session array to display the cart items. Each cart item will have a remove link.</p>
+<p>If the shopping cart user clicks the remove link then, I remove the respective cart item from the session.</p>
+<p>I have provided an ‘Empty Cart’ button control above the shopping cart. The users can use it to completely wipe out the cart session and clear the cart.</p>
+<p>I have presented the PHP code below to “remove” and the “empty” cases. They handle the shopping cart to remove/clear actions.</p>
+<p>I have used PHP unset() to clear the cart session to delete the added item from the shopping cart.</p>
+<pre class="prettyprint lang-php prettyprinted" style=""><span class="kwd">case</span><span class="pln"> </span><span class="str">"remove"</span><span class="pun">:</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pun">(!</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> $k </span><span class="pun">=&gt;</span><span class="pln"> $v</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">$_GET</span><span class="pun">[</span><span class="str">"code"</span><span class="pun">]</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> $k</span><span class="pun">)</span><span class="pln">
+				unset</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">][</span><span class="pln">$k</span><span class="pun">]);</span><span class="pln">				
+			</span><span class="kwd">if</span><span class="pun">(</span><span class="pln">empty</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]))</span><span class="pln">
+				unset</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]);</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+	</span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">case</span><span class="pln"> </span><span class="str">"empty"</span><span class="pun">:</span><span class="pln">
+	unset</span><span class="pun">(</span><span class="pln">$_SESSION</span><span class="pun">[</span><span class="str">"cart_item"</span><span class="pun">]);</span><span class="pln">
+        </span><span class="kwd">break</span><span class="pun">;</span></pre>
+<h2>Database Product Table for Shopping Cart</h2>
+<p>You should import the following SQL script. It will create the product table and load data into it. In the example, I have used this product data to display products in the gallery.</p>
+<pre class="prettyprint lang-php prettyprinted" style=""><span class="pun">--</span><span class="pln">
+</span><span class="pun">--</span><span class="pln"> </span><span class="typ">Table</span><span class="pln"> structure </span><span class="kwd">for</span><span class="pln"> table </span><span class="str">`tblproduct`</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">
+
+CREATE TABLE </span><span class="str">`tblproduct`</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+  </span><span class="str">`id`</span><span class="pln"> </span><span class="kwd">int</span><span class="pun">(</span><span class="lit">8</span><span class="pun">)</span><span class="pln"> NOT NULL</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">`name`</span><span class="pln"> varchar</span><span class="pun">(</span><span class="lit">255</span><span class="pun">)</span><span class="pln"> NOT NULL</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">`code`</span><span class="pln"> varchar</span><span class="pun">(</span><span class="lit">255</span><span class="pun">)</span><span class="pln"> NOT NULL</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">`image`</span><span class="pln"> text NOT NULL</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">`price`</span><span class="pln"> </span><span class="kwd">double</span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> NOT NULL
+</span><span class="pun">)</span><span class="pln"> ENGINE</span><span class="pun">=</span><span class="typ">InnoDB</span><span class="pln"> DEFAULT CHARSET</span><span class="pun">=</span><span class="pln">latin1</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">--</span><span class="pln">
+</span><span class="pun">--</span><span class="pln"> </span><span class="typ">Dumping</span><span class="pln"> data </span><span class="kwd">for</span><span class="pln"> table </span><span class="str">`tblproduct`</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">
+
+INSERT INTO </span><span class="str">`tblproduct`</span><span class="pln"> </span><span class="pun">(</span><span class="str">`id`</span><span class="pun">,</span><span class="pln"> </span><span class="str">`name`</span><span class="pun">,</span><span class="pln"> </span><span class="str">`code`</span><span class="pun">,</span><span class="pln"> </span><span class="str">`image`</span><span class="pun">,</span><span class="pln"> </span><span class="str">`price`</span><span class="pun">)</span><span class="pln"> VALUES
+</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="str">'FinePix Pro2 3D Camera'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'3DcAM01'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'product-images/camera.jpg'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1500.00</span><span class="pun">),</span><span class="pln">
+</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="str">'EXP Portable Hard Drive'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'USB02'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'product-images/external-hard-drive.jpg'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">800.00</span><span class="pun">),</span><span class="pln">
+</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Luxury Ultra thin Wrist Watch'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'wristWear03'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'product-images/watch.jpg'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">300.00</span><span class="pun">),</span><span class="pln">
+</span><span class="pun">(</span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="str">'XP 1155 Intel Core Laptop'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'LPN45'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'product-images/laptop.jpg'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">800.00</span><span class="pun">);</span><span class="pln">
+
+</span><span class="pun">--</span><span class="pln">
+</span><span class="pun">--</span><span class="pln"> </span><span class="typ">Indexes</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> table </span><span class="str">`tblproduct`</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">
+ALTER TABLE </span><span class="str">`tblproduct`</span><span class="pln">
+  ADD PRIMARY KEY </span><span class="pun">(</span><span class="str">`id`</span><span class="pun">),</span><span class="pln">
+  ADD UNIQUE KEY </span><span class="str">`product_code`</span><span class="pln"> </span><span class="pun">(</span><span class="str">`code`</span><span class="pun">);</span><span class="pln">
+
+</span><span class="pun">--</span><span class="pln">
+</span><span class="pun">--</span><span class="pln"> AUTO_INCREMENT </span><span class="kwd">for</span><span class="pln"> dumped tables
+</span><span class="pun">--</span><span class="pln">
+
+</span><span class="pun">--</span><span class="pln">
+</span><span class="pun">--</span><span class="pln"> AUTO_INCREMENT </span><span class="kwd">for</span><span class="pln"> table </span><span class="str">`tblproduct`</span><span class="pln">
+</span><span class="pun">--</span><span class="pln">
+ALTER TABLE </span><span class="str">`tblproduct`</span><span class="pln">
+  MODIFY </span><span class="str">`id`</span><span class="pln"> </span><span class="kwd">int</span><span class="pun">(</span><span class="lit">8</span><span class="pun">)</span><span class="pln"> NOT NULL AUTO_INCREMENT</span><span class="pun">,</span><span class="pln"> AUTO_INCREMENT</span><span class="pun">=</span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+COMMIT</span><span class="pun">;</span></pre>
+<h2>Simple PHP Shopping Cart Output</h2>
+<p>Below screenshot shows the product gallery of this simple PHP shopping cart example. The listed cart items above the gallery are from the PHP session.</p>
+<p><img class="alignnone size-full wp-image-4091" title="php-shopping-cart" src="./Simple PHP Shopping Cart - Phppot_files/phpshoppingcart.png" alt="php-shopping-cart" width="582" height="585"></p>
+<p>&nbsp;</p>
+<p><a class="demo" href="https://phppot.com/demo/simple-php-shopping-cart/">View Demo</a><a class="download" href="https://phppot.com/downloads/simple-php-shopping-cart.zip">Download</a></p>
+
+    <div class="related-articles">
+                    <h2>Popular Articles</h2>
+                    <ul class="related-articles-list">
+                        <li><a href="https://phppot.com/php/how-to-integrate-paypal-checkout-in-ecommerce-website/">How to Integrate PayPal Checkout in eCommerce Website</a></li>
+                        <li><a href="https://phppot.com/php/how-to-develop-ecommerce-software-with-discount-coupon/">How to Develop eCommerce Software with Discount Coupon</a></li>
+                        <li><a href="https://phppot.com/php/shopify-like-sticky-shopping-cart-in-php/">Shopify Like Shopping Cart with Sticky Checkout using PHP</a></li>
+                    </ul>
+                </div>
+                <p>
+                    <a href="https://phppot.com/php/simple-php-shopping-cart/#top" class="top">↑ Back to Top</a>
+                </p>
+            </div>
+            <div id="tutorial-menu">
+	<ul class="main-menu"><li class="cat-item cat-item-72"><a href="https://phppot.com/category/php/">PHP</a><ul class="sub-menu"><li class="cat-item cat-item-59 "><a href="https://phppot.com/category/php/php-introduction/">PHP Introduction</a></li><li class="cat-item cat-item-26 "><a href="https://phppot.com/category/php/php-basics/">PHP Basics</a></li><li class="cat-item cat-item-99 "><a href="https://phppot.com/category/php/product/">Product</a></li><li class="cat-item cat-item-79 taxonomy-active"><a href="https://phppot.com/category/php/php-shopping-cart/">PHP Shopping Cart</a><ul class="post-list"><li class="current-post">Simple PHP Shopping Cart</li><li><a class="post-menu" href="https://phppot.com/php/one-page-checkout-script-free-with-example-template-in-php/">One Page Checkout Script Free with Example Template in PHP</a></li><li><a class="post-menu" href="https://phppot.com/php/top-10-factors-in-ecommerce-shopping-cart-software-gallery-design/">Top 10 Factors in eCommerce Shopping Cart Software Gallery Design</a></li><li><a class="post-menu" href="https://phppot.com/php/php-shopping-cart-with-paypal-payment-gateway-integration/">PHP Shopping Cart with PayPal Payment Gateway Integration</a></li><li><a class="post-menu" href="https://phppot.com/php/how-to-integrate-paypal-checkout-in-ecommerce-website/">How to Integrate PayPal Checkout in eCommerce Website</a></li><li><a class="post-menu" href="https://phppot.com/php/shopify-like-sticky-shopping-cart-in-php/">Shopify Like Shopping Cart with Sticky Checkout using PHP</a></li><li><a class="post-menu" href="https://phppot.com/php/shipping-api-integration-in-php-with-australia-post-example/">Shipping API Integration in PHP with Australia Post Example</a></li><li><a class="post-menu" href="https://phppot.com/php/how-to-develop-ecommerce-software-with-discount-coupon/">How to Develop eCommerce Software with Discount Coupon</a></li><li><a class="post-menu" href="https://phppot.com/php/how-to-build-a-persistent-shopping-cart-in-php/">How to Build a Persistent Shopping Cart in PHP</a></li><li><a class="post-menu" href="https://phppot.com/php/php-shopping-cart-without-database/">PHP Shopping Cart without Database</a></li><li><a class="post-menu" href="https://phppot.com/php/responsive-php-shopping-cart/">Responsive PHP Shopping Cart</a></li><li><a class="post-menu" href="https://phppot.com/php/php-shopping-cart-with-jquery-ajax/">PHP Shopping Cart with jQuery AJAX</a></li><li><a class="post-menu" href="https://phppot.com/php/ajax-cart-edit-in-php-shopping-cart/">AJAX Cart Edit in PHP Shopping Cart</a></li><li><a class="post-menu" href="https://phppot.com/php/shopping-cart-with-multi-tab-wizard-using-jquery-ajax/">Shopping Cart with Multi-Tab Wizard using jQuery AJAX</a></li><li><a class="post-menu" href="https://phppot.com/php/php-shopping-cart-by-jquery-drag-and-drop/">PHP Shopping Cart by jQuery Drag and Drop</a></li><li><a class="post-menu" href="https://phppot.com/php/enriched-responsive-shopping-cart-in-php/">Enriched Responsive Shopping Cart in PHP</a></li><li><a class="post-menu" href="https://phppot.com/php/zoom-for-product-images-in-php-shopping-cart/">Zoom for Product Images in PHP Shopping Cart</a></li><li><a class="post-menu" href="https://phppot.com/php/shopping-cart-software-product-quick-view-with-bootstrap-tooltip/">Shopping Cart Software Product Quick View with Bootstrap Tooltip</a></li><li><a class="post-menu" href="https://phppot.com/php/responsive-product-gallery-for-shopping-cart/">Responsive Product Gallery for Shopping Cart</a></li><li><a class="post-menu" href="https://phppot.com/php/ecommerce-software-product-gallery-slideshow-with-jquery-lightbox/">eCommerce Software Product Gallery Slideshow with jQuery Lightbox</a></li><li><a class="post-menu" href="https://phppot.com/php/shopping-cart-product-quick-look-like-amazon/">Shopping Cart Product Quick Look like Amazon</a></li><li><a class="post-menu" href="https://phppot.com/php/amazon-like-product-images-showcase-for-shopping-cart/">Amazon like Product Images Showcase for Shopping Cart</a></li><li><a class="post-menu" href="https://phppot.com/php/add-multiple-bulk-product-into-shopping-cart-using-php/">Add Multiple (Bulk) Product into Shopping Cart using PHP</a></li><li><a class="post-menu" href="https://phppot.com/php/shopping-cart-item-quantity-increment-decrement-with-ajax/">Shopping Cart Item Quantity Increment Decrement with AJAX</a></li></ul></li><li class="cat-item cat-item-102 "><a href="https://phppot.com/category/php/payment-gateway-integration/">Payment Gateway Integration</a></li><li class="cat-item cat-item-94 "><a href="https://phppot.com/category/php/php-contact-form/">PHP Contact Form</a></li><li class="cat-item cat-item-103 "><a href="https://phppot.com/category/php/comments-system/">Comments System</a></li><li class="cat-item cat-item-57 "><a href="https://phppot.com/category/php/types-variables-operators/">Types, Variables &amp; Operators</a></li><li class="cat-item cat-item-58 "><a href="https://phppot.com/category/php/php-strings/">PHP Strings</a></li><li class="cat-item cat-item-22 "><a href="https://phppot.com/category/php/php-arrays/">PHP Arrays</a></li><li class="cat-item cat-item-61 "><a href="https://phppot.com/category/php/php-functions/">PHP Functions</a></li><li class="cat-item cat-item-35 "><a href="https://phppot.com/category/php/php-oops/">PHP OOPS</a></li><li class="cat-item cat-item-31 "><a href="https://phppot.com/category/php/php-forms/">PHP Forms</a></li><li class="cat-item cat-item-78 "><a href="https://phppot.com/category/php/advanced/">Advanced</a></li><li class="cat-item cat-item-90 "><a href="https://phppot.com/category/php/php-ajax/">PHP AJAX</a></li><li class="cat-item cat-item-89 "><a href="https://phppot.com/category/php/restful-api/">RESTful API</a></li><li class="cat-item cat-item-15 "><a href="https://phppot.com/category/php/php-databases/">PHP Databases</a></li><li class="cat-item cat-item-23 "><a href="https://phppot.com/category/php/php-sessions-and-cookies/">PHP Sessions and Cookies</a></li><li class="cat-item cat-item-51 "><a href="https://phppot.com/category/php/error-exception-handling/">Error and Exception Handling</a></li><li class="cat-item cat-item-100 "><a href="https://phppot.com/category/php/file-upload/">File Upload</a></li><li class="cat-item cat-item-101 "><a href="https://phppot.com/category/php/file-import-export/">File Import Export</a></li><li class="cat-item cat-item-36 "><a href="https://phppot.com/category/php/files-and-directories/">Files and Directories</a></li><li class="cat-item cat-item-45 "><a href="https://phppot.com/category/php/php-date-time/">PHP Date Time</a></li><li class="cat-item cat-item-12 "><a href="https://phppot.com/category/php/php-graphics/">PHP Graphics</a></li><li class="cat-item cat-item-24 "><a href="https://phppot.com/category/php/php-xml/">PHP XML</a></li><li class="cat-item cat-item-62 "><a href="https://phppot.com/category/php/php-code-samples/">PHP Code Samples</a></li><li class="cat-item cat-item-96 "><a href="https://phppot.com/category/php/library/">Library</a></li><li class="cat-item cat-item-88 "><a href="https://phppot.com/category/php/php-freelancer/">PHP Freelancer</a></li></ul></li><li class="cat-item cat-item-73"><a href="https://phppot.com/category/jquery/">jQuery</a></li></ul></div>
+
+        </div>
+<div id="sidebar">
+    <div id="aboutcntnt">
+        <div id="photo">
+            <img src="./Simple PHP Shopping Cart - Phppot_files/Vincy.jpg" alt="Vincy" width="100" height="100" title="Vincy">
+        </div>
+        <div id="aboutdesc">
+            <p>
+                I’m Vincy, I help build the best websites and available for freelance work.
+            </p>
+        </div>
+        <div id="contactMe">
+            <a href="mailto:vincy@phppot.com" title="Contact Me">vincy@phppot.com</a>
+        </div>
+        <div class="testimonials-sbar">
+    <p class="testimonial-content"><span class="left-quotes">“</span>Vincy is talented. I am very impressed by her work and diligence. I highly recommend Vincy, and I am eager to work with her in my next project ...<span class="right-quotes">”</span> <a href="https://phppot.com/testimonials/">read more</a></p>
+    <p class="testimonials-sbar-by">Stephen Opiyo, Patira Data Science, USA</p>
+</div>
+    </div>
+
+                          <div class="sidebar-featured-product">
+        <a href="https://phppot.com/shop/contact-form-iris/"><img src="./Simple PHP Shopping Cart - Phppot_files/simple-secure-spam-free-contact-form-in-php-iris-150x150.png">
+        </a>
+        <div class="sidebar-featured-url">
+            <div class="heading">Featured Product</div>
+        <a href="https://phppot.com/shop/contact-form-iris/">Contact
+                Form - Iris</a>
+        </div>
+    </div>
+        </div></div>
+<div id="footer-contact-note">
+    <div class="content">
+        <h2>Looking for a freelance web developer?</h2>
+        <p class="footer-contact-banner-title">Do you want to build a modern, lightweight, responsive website and launch quickly? <a id="footer-contact-navigation" href="https://phppot.com/contact/">Contact
+                Me</a></p>
+    </div>
+</div>
+<div id="footer">
+    <div class="content">
+        <div class="subscribe-section">
+            <div class="subscribe-email">
+                <div>
+    <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;https://feedburner.google.com/fb/a/mailverify?uri=phppot&#39;,
+             &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+        <p>
+        </p><div><label for="feedb-email-inp">Email:</label></div>
+            <input id="feedb-email-inp" placeholder="Enter your email here" type="text" class="feedb-email" name="email"><input type="hidden" value="phppot" name="uri"><input type="hidden" name="loc" value="en_US"><input type="submit" value="Subscribe" class="subscribe">
+        <p></p>
+    </form>
+</div></div>
+
+            <div class="follow">
+                <a class="twitter" href="https://www.linkedin.com/in/vincya/" rel="nofollow noopener" title="Phppot LinkedIn Page" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="shop-footer-common">
+            <div class="shop-doc-nav">
+                <div class="shop-doc-nav-links">
+                    <div class="heading">Digital Goods Shop</div>
+                    <a href="https://phppot.com/faq/">FAQ</a> <a href="https://phppot.com/support-policy/">Support
+                        Policy</a> <a href="https://phppot.com/refund-policy/">Refund Policy</a>
+                    <a href="https://phppot.com/licenses/">Licenses</a> <a href="https://phppot.com/user-license/">User License</a> <a href="https://phppot.com/developer-license/">Developer License</a>
+                </div>
+
+                <div class="policy-doc-nav">
+                    <a href="https://phppot.com/terms-of-use/">Terms of
+                        Service</a><a href="https://phppot.com/privacy-policy/">Privacy
+                        Policy</a><a href="https://phppot.com/privacy-policy/#cookie-policy">Cookie
+                        Policy</a> <span class="copyright">© 2020 <a href="https://phppot.com/" title="Helping you build the best websites!">Phppot</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('click', function(e){
+    	var element = document.getElementsByClassName("search-container")[0];
+        if (element && !element.contains(e.target) && e.target.id != "mobile-search-icon" && window.innerWidth <= "550") {
+            element.style.display = "none";
+        }
+    });
+    function toggleSearch() {
+        var element = document.getElementsByClassName("search-container")[0];
+        if(element.style.display == 'inline-block') {
+            	element.style.display = "none";
+        } else {
+        	   element.style.display = "inline-block";
+        }
+    }
+</script><script async="" src="./Simple PHP Shopping Cart - Phppot_files/prettify.js"></script>
+
+</body></html>

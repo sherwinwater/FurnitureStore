@@ -1,0 +1,130 @@
+ul {
+    list-style-type: none;
+    margin-bottom: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#furniture {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+body{
+    text-align: center;
+}
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+th{
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.buy:link, .buy:visited {
+    background-color: teal;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buy:hover, .buy:active {
+    background-color: goldenrod;
+}
+
+.shopping:link, .shopping:visited {
+    background-color: goldenrod;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.shopping:hover, .shopping:active {
+    background-color: lightpink;
+}
+
+.checkout .add{
+    color:white;
+    background-color: orange;
+    border: 1px solid;
+}
+
+input[type=submit]{
+    padding:7px;
+    width: 140px;
+}
+input[type=number]{
+    padding:7px;
+    width: 40px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+.checkoutTbl{
+    border-collapse: collapse;
+    border: 0px;
+}
+.order_deliveryinfo,
+.order_billinginfo{
+    width: 70%;
+    margin:auto;
+    text-align: left;
+}
+
+.container-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_div{
+    margin: 10px;
+    padding: 5px;
+}
+
+fieldset{
+    display: inline-block;
+    width: 50%;
+}
+
+.payment_div{
+    width: 60%;
+}
