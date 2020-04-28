@@ -9,7 +9,7 @@ include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/Model/product.php";
 // read all products in the database
 $product = new Product($conn);
 $columnNames = $product->getColumnNames();
-$productList = $product->gerAllProducts();
+$productList = $product->getAllProducts();
 
 //add to cart
 $productid = isset($_GET['id']) ? $_GET['id'] : "";
