@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/View/header.php";
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/Controller/cart/showCart.php";
 showCart("", "hidden");
@@ -12,14 +13,14 @@ showCart("", "hidden");
         <?php
         if ($totalprice > 0 && !isset($_SESSION['orderID'])) {
             ?>
-        <h3>Hey <?= isset($_SESSION["user"])?$_SESSION["user"]:"guest" ?>, Your shopping cart</h3>
+        <h3>Hi <?= isset($_SESSION["user"])?$_SESSION["user"]:"Guest" ?>, Your shopping cart</h3>
             <form method='get' action='/sys11099/PHP/FurnitureStore/Controller/cart/cart_update.php'>
                 <?= $cart_table ?>
                 <input type="submit" value="Proceed to Checkout" > 
             </form>
         <?php } else {
             ?>
-            <p>You haven't chosen any product</p>
+            <p>Hi <?= isset($_SESSION["user"])?$_SESSION["user"]:"Guest" ?>,You haven't chosen any product</p>
         <?php }
         ?>
         <script>

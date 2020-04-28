@@ -46,7 +46,7 @@ class Delivery {
     }
 
     // read all orders
-    function gerAllDelivery() {
+    function getAllDelivery() {
 
         // select all orders query
         $query = "SELECT *

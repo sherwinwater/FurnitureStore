@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore"."/View/header.php";
 
 ?>

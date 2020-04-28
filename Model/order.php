@@ -48,7 +48,7 @@ class Order {
     }
 
     // read all orders
-    function gerAllOrders() {
+    function getAllOrders() {
 
         // select all orders query
         $query = "SELECT

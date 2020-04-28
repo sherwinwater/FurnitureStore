@@ -63,7 +63,7 @@ class Product {
     }
 
     // read all products
-    function gerAllProducts() {
+    function getAllProducts() {
 
         // select all products query
         $query = "SELECT *

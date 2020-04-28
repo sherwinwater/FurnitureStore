@@ -36,7 +36,7 @@ class Customer {
     }
 
     // read all customers
-    function gerAllCustomers() {
+    function getAllCustomers() {
 
         // select all orders query
         $query = "SELECT *

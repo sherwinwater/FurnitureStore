@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+//session_start();
 ?>
 
 <!DOCTYPE html>
@@ -16,23 +15,17 @@ session_start();
         <h1>Welcome to Furniture Store</h1>
 
         <ul>
-           <li><a href="/sys11099/PHP/FurnitureStore/View/index.php">Home</a></li>
+            <li><a href="/sys11099/PHP/FurnitureStore/View/index.php">Home</a></li>
 
             <?php
             if (isset($_SESSION["user"])) {
-                if ($_SESSION["user"] != "Guest") {
-                    ?>
-                    <li><a><? echo "Hi ".$_SESSION["user"] ?></a></li>
-                   <li><a href="/sys11099/PHP/FurnitureStore/Controller/user/logout.php">Logout</a></li>
-                <?php } else { ?>
-                    <li><a ><? echo "Hi Guest" ?></a></li>
-                   <li><a href="/sys11099/PHP/FurnitureStore/Controller/user/login.php">Login</a></li>
-
-                <?php } ?>
+                ?>
+            <li><a style="color: gold"><? echo "Hi ".$_SESSION["user"] ?></a></li>
+                <li><a href="/sys11099/PHP/FurnitureStore/Controller/user/logout.php">Logout</a></li>
                 <?php
             } else {
                 ?>
-              <li><a href="/sys11099/PHP/FurnitureStore/Controller/user/login.php">Login</a></li>
+                <li><a href="/sys11099/PHP/FurnitureStore/Controller/user/login.php">Login</a></li>
                 <?php
             }
             ?>

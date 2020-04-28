@@ -1,4 +1,7 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/View/header.php";
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/config/connect.php";
 include "/opt/lampp/htdocs/sys11099/PHP/FurnitureStore" . "/Model/product.php";
@@ -25,6 +28,7 @@ if ($quantity != 0) {
         "imgpath" => $imgpath);
     $_SESSION['cart'][$productid] = $product_to_cart;
 }
+
 ?>
 
 <!DOCTYPE html>

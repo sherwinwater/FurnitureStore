@@ -54,7 +54,7 @@ class Billing {
     }
 
     // read all orders
-    function gerAllBillings() {
+    function getAllBillings() {
 
         // select all orders query
         $query = "SELECT *
